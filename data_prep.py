@@ -63,6 +63,7 @@ def dummy_ingredients(products):
         # Uncomment to see how many unique ice creams contain the dummy ingredient
         # print(products[col_name].sum())
 
+
 def contains_choc(products):
     pass
 
@@ -80,6 +81,10 @@ if __name__ == "__main__":
     ingredients_df = make_ingredients_df(ingr_dict)
     # ingredients_df.to_csv(wd + "/data/ingredients.csv")
     # print(ingredients_df)
+    
     dummy_ingredients(products)
+    products = pd.get_dummies(data = products, columns = ['brand'])
+
+    products.to_csv(wd + "/products_working.csv")
 
     
