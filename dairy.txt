@@ -14,6 +14,7 @@ Cheese
 Condensed Milk
 Cottage Cheese
 Cream
+Cream Cheese
 Curds
 Custard
 Delactosed Whey
@@ -28,6 +29,7 @@ Half & Half
 Heavy Cream
 Hydrolyzed Casein
 Hydrolyzed Milk Protein
+Ice Cream
 Iron Caseinate
 Lactalbumin
 Lactoferrin
@@ -38,13 +40,18 @@ Low-Fat Milk
 Magnesium Caseinate
 Malted Milk
 Milk
+Milk Chocolate
 Milk Derivative
 Milk Fat
 Milk Powder
 Milk Protein
+Milk Protein Concentrate
 Milk Solids
+Milkfat
 Natural Butter Flavor
+Nonfat Dry Milk
 Nonfat Milk
+Nonfat Milk Solids
 Nougat
 Paneer
 Potassium Caseinate
@@ -66,5 +73,6 @@ Whey Protein Hydrolysate
 Whipped Cream
 Whipped Topping
 Whole Milk
+Whole Milk Powder
 Yogurt
 Zinc Caseinate
