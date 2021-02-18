@@ -44,6 +44,15 @@ def split_parent_child(df_column):
     return(parent, child)
 
 
+def make_dummies(products):
+    # Make dummies for ingredients
+    dummy_ingredients(products)
+
+    # Make dummies for brand
+    products = pd.get_dummies(data = products, columns = ['brand'])
+    
+    return(products)
+
 # Create dummy variables for ingredients:
 # - Cocoa vs. chocolate?
 # - Peanuts
@@ -54,17 +63,15 @@ def split_parent_child(df_column):
 # - Pecans
 # What others?
 def dummy_ingredients(products):
-    dummies = ['peanuts', 'almonds', 'pecans', 'coffee', 'strawberries', 'raspberries']
+    dummies = ['peanuts', 'almonds', 'pecans', 'coffee', 'strawberries', 'raspberries', 'walnuts']
 
     # Create new column for each desired dummy
     for d in dummies:
         col_name = "contains_" + d
-        products[col_name] = products['ingredients_as_list'].apply(lambda x: d in x)
-        # Uncomment to see how many unique ice creams contain the dummy ingredient
-        # print(products[col_name].sum())
+        products[col_name] = products['ingredients_as_list'].apply(lambda x: 1 if (d in x) else 0)
 
 
-def contains_choc(products):
+def dummy_choc(products):
     pass
 
 
@@ -82,9 +89,7 @@ if __name__ == "__main__":
     # ingredients_df.to_csv(wd + "/data/ingredients.csv")
     # print(ingredients_df)
     
-    dummy_ingredients(products)
-    products = pd.get_dummies(data = products, columns = ['brand'])
-
+    products = make_dummies(products)
     products.to_csv(wd + "/products_working.csv")
 
     
