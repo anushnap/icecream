@@ -63,7 +63,7 @@ def make_dummies(products):
 # - Pecans
 # What others?
 def dummy_ingredients(products):
-    dummies = ['peanuts', 'almonds', 'pecans', 'coffee', 'strawberries', 'raspberries', 'walnuts']
+    dummies = ['peanuts', 'almonds', 'pecans', 'coffee', 'strawberries', 'raspberries', 'walnuts', 'rum']
 
     # Create new column for each desired dummy
     for d in dummies:
