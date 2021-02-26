@@ -78,12 +78,40 @@ def make_dummies(products):
 # - Pecans
 # Others?
 def dummy_topping(products):
-    dummies = ['peanuts', 'almonds', 'pecans', 'coffee', 'strawberries', 'raspberries', 'walnuts', 'rum', 'toffee']
+    dummies = [
+        'peanuts', 
+        'almonds', 
+        'pecans', 
+        'coffee', 
+        'strawberries', 
+        'raspberries', 
+        'walnuts', 
+        'rum', 
+        'toffee', 
+        'mangos', 
+        'cream cheese', 
+        'brown sugar', 
+        'caramel']
 
     # Create new column for each desired dummy
     for d in dummies:
         col_name = "contains_" + d
+        roasted_d = "roasted " + d
         products[col_name] = products['parent_ingredients_as_set'].apply(lambda x: 1 if (d in x) else 0)
+    
+    products['contains_chocolate'] = products['parent_ingredients_as_set'].apply(lambda x: 1 if (contains_chocolate(x)) else 0)
+
+
+def contains_chocolate(parent_set):
+    chocolate = {'chocolate', 'cocoa'}
+
+    contains_c = False
+    for c in chocolate:
+        for s in parent_set:
+            if c in s:
+                contains_c = True
+    
+    return(contains_c)
 
 
 if __name__ == "__main__":
