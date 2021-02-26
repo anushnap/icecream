@@ -2,3 +2,5 @@
 Icecream.csv
 *.zip
 *.ipynb
+*_v2.xlsx
+*/data/reviews.csv
