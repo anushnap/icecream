@@ -78,40 +78,62 @@ def make_dummies(products):
 # - Pecans
 # Others?
 def dummy_topping(products):
-    dummies = [
-        'peanuts', 
-        'almonds', 
+    dummies_in_ingredients = [
         'pecans', 
         'coffee', 
-        'strawberries', 
-        'raspberries', 
         'walnuts', 
         'rum', 
-        'toffee', 
-        'mangos', 
         'cream cheese', 
-        'brown sugar', 
-        'caramel']
+        'brown sugar',
+        'cinnamon',
+        'lemon juice concentrate',
+        'pineapple'
+    ]
 
     # Create new column for each desired dummy
-    for d in dummies:
+    for d in dummies_in_ingredients:
         col_name = "contains_" + d
-        roasted_d = "roasted " + d
         products[col_name] = products['parent_ingredients_as_set'].apply(lambda x: 1 if (d in x) else 0)
-    
-    products['contains_chocolate'] = products['parent_ingredients_as_set'].apply(lambda x: 1 if (contains_chocolate(x)) else 0)
+   
+    # Create new columns for desired dummy using search term in ice cream description
+    dummies_in_description = [
+        'marshmallow',
+        'cookie dough',
+        'toffee',
+        'caramel'
+    ]
+
+    for d in dummies_in_description:
+        col_name = "contains_" + d
+        description_to_lower = products['description'].str.lower()
+        products[col_name] = description_to_lower.str.contains(d).apply(lambda x: 1 if x else 0)
+ 
+    # Create new column for desired dummy using search terms in ingredients list
+    products['contains_chocolate'] = products['parent_ingredients_as_set'].apply(lambda x: contains_ingredient({'chocolate', 'cocoa'}, x))
+    products['contains_peanuts'] = products['parent_ingredients_as_set'].apply(lambda x: contains_ingredient({'peanuts'}, x))
+    products['contains_almonds'] = products['parent_ingredients_as_set'].apply(lambda x: contains_ingredient({'almonds'}, x))
+    products['contains_strawberries'] = products['parent_ingredients_as_set'].apply(lambda x: contains_ingredient({'strawberr'}, x))
+    products['contains_raspberries'] = products['parent_ingredients_as_set'].apply(lambda x: contains_ingredient({'raspberr'}, x))
+    products['contains_mangos'] = products['parent_ingredients_as_set'].apply(lambda x: contains_ingredient({'mango'}, x))
+    products['contains_banana'] = products['parent_ingredients_as_set'].apply(lambda x: contains_ingredient({'banana'}, x))
 
 
-def contains_chocolate(parent_set):
-    chocolate = {'chocolate', 'cocoa'}
-
-    contains_c = False
-    for c in chocolate:
+# Checks each element of parent ingredient and returns whether or not the desired ingredient set
+# is in the set. 
+# Ex] if {'chocolate', 'cocoa'} is passed and parent set contains "dark chocolate" or 
+# "dutched cocoa", return True
+def contains_ingredient(search_term, parent_set):
+    contains_i = 0
+    for t in search_term:
         for s in parent_set:
-            if c in s:
-                contains_c = True
-    
-    return(contains_c)
+            if t in s:
+                contains_i = 1
+            
+    return(contains_i)
+
+
+def contains_ingredient_in_description(x, search_term):
+    return (1 if (search_term in x) else 0)
 
 
 if __name__ == "__main__":
@@ -123,4 +145,3 @@ if __name__ == "__main__":
     products.to_csv(wd + "/products_working.csv")
     ingredients_analysis = make_ingredients_df()
     ingredients_analysis.to_csv(wd + "/ingredients.csv")
-    
