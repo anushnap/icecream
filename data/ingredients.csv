@@ -1,452 +1,389 @@
-,Ingredient,count,percent_containing,Parent,Child
-0,cream,250,1.037344398340249,cream,
-1,skim milk,163,0.6763485477178424,skim milk,
-2,"liquid sugar (sugar, water)",57,0.23651452282157676,liquid sugar,"sugar, water"
-3,water,134,0.5560165975103735,water,
-4,brown sugar,28,0.11618257261410789,brown sugar,
-5,sugar,310,1.2863070539419088,sugar,
-6,milk,116,0.48132780082987553,milk,
-7,wheat flour,75,0.3112033195020747,wheat flour,
-8,egg yolks,127,0.5269709543568465,egg yolks,
-9,corn syrup,143,0.5933609958506224,corn syrup,
-10,eggs,27,0.11203319502074689,eggs,
-11,"butter (cream, salt)",39,0.16182572614107885,butter,"cream, salt"
-12,butteroil,12,0.04979253112033195,butteroil,
-13,pectin,63,0.26141078838174275,pectin,
-14,sea salt,17,0.07053941908713693,sea salt,
-15,soybean oil,59,0.24481327800829875,soybean oil,
-16,vanilla extract,125,0.5186721991701245,vanilla extract,
-17,guar gum,83,0.34439834024896265,guar gum,
-18,soy lecithin,166,0.6887966804979253,soy lecithin,
-19,"baking powder (sodium acid pyrophosphate, sodium bicarbonate, corn starch, monocalcium phosphate)",1,0.004149377593360996,baking powder,"sodium acid pyrophosphate, sodium bicarbonate, corn starch, monocalcium phosphate"
-20,baking soda,74,0.3070539419087137,baking soda,
-21,salt,219,0.9087136929460581,salt,
-22,carrageenan,63,0.26141078838174275,carrageenan,
-23,lactase,4,0.016597510373443983,lactase,
-24,peanuts,31,0.12863070539419086,peanuts,
-25,canola oil,29,0.12033195020746888,canola oil,
-26,corn starch,29,0.12033195020746888,corn starch,
-27,peanut oil,27,0.11203319502074689,peanut oil,
-28,cocoa powder,23,0.0954356846473029,cocoa powder,
-29,invert cane sugar,4,0.016597510373443983,invert cane sugar,
-30,milk fat,26,0.1078838174273859,milk fat,
-31,egg whites,18,0.07468879668049792,egg whites,
-32,tapioca starch,16,0.06639004149377593,tapioca starch,
-33,barley malt,5,0.02074688796680498,barley malt,
-34,malted barley flour,6,0.024896265560165973,malted barley flour,
-35,cocoa (processed with alkali),51,0.21161825726141079,cocoa,processed with alkali
-36,potato,1,0.004149377593360996,potato,
-37,coconut oil,149,0.6182572614107884,coconut oil,
-38,corn syrup solids,3,0.012448132780082987,corn syrup solids,
-39,rice starch,1,0.004149377593360996,rice starch,
-40,sunflower oil,12,0.04979253112033195,sunflower oil,
-41,yeast extract,1,0.004149377593360996,yeast extract,
-42,natural flavor,165,0.6846473029045643,natural flavor,
-43,milkfat,16,0.06639004149377593,milkfat,
-44,enzymes,3,0.012448132780082987,enzymes,
-45,contains milk,1,0.004149377593360996,contains milk,
-46,wheat and soy,1,0.004149377593360996,wheat and soy,
-47,dried cane syrup,22,0.0912863070539419,dried cane syrup,
-48,cocoa,50,0.2074688796680498,cocoa,
-49,butter oil,9,0.03734439834024896,butter oil,
-50,natural flavors,27,0.11203319502074689,natural flavors,
-51,locust bean gum,1,0.004149377593360996,locust bean gum,
-52,citric acid,11,0.04564315352697095,citric acid,
-53,vanilla bean seeds,1,0.004149377593360996,vanilla bean seeds,
-54,lactic acid,11,0.04564315352697095,lactic acid,
-55,graham flour,6,0.024896265560165973,graham flour,
-56,molasses,35,0.14522821576763487,molasses,
-57,honey,15,0.06224066390041494,honey,
-58,caramelized sugar syrup,4,0.016597510373443983,caramelized sugar syrup,
-59,chocolate liquor,17,0.07053941908713693,chocolate liquor,
-60,tapioca flour,1,0.004149377593360996,tapioca flour,
-61,peanut flour,1,0.004149377593360996,peanut flour,
-62,peanut extract,1,0.004149377593360996,peanut extract,
-63,cocoa butter,58,0.24066390041493776,cocoa butter,
-64,"roasted almonds (almonds, peanut oil)",4,0.016597510373443983,roasted almonds,"almonds, peanut oil"
-65,blackberry juice concentrate,1,0.004149377593360996,blackberry juice concentrate,
-66,banana puree,3,0.012448132780082987,banana puree,
-67,nonfat milk,8,0.03319502074688797,nonfat milk,
-68,lemon juice concentrate,23,0.0954356846473029,lemon juice concentrate,
-69,invert sugar,5,0.02074688796680498,invert sugar,
-70,spices,2,0.008298755186721992,spices,
-71,cinnamon,5,0.02074688796680498,cinnamon,
-72,almonds,16,0.06639004149377593,almonds,
-73,pecans,7,0.029045643153526972,pecans,
-74,whiskey,2,0.008298755186721992,whiskey,
-75,dry malt extract (barley),2,0.008298755186721992,dry malt extract,barley
-76,caramel color,2,0.008298755186721992,caramel color,
-77,may contain other tree nuts,1,0.004149377593360996,may contain other tree nuts,
-78,coffee extract,5,0.02074688796680498,coffee extract,
-79,cocoa processed with alkali,47,0.1950207468879668,cocoa processed with alkali,
-80,"cream cheese (pasteurized milk, cream, cheese cultures, salt, carob bean gum)",1,0.004149377593360996,cream cheese,"pasteurized milk, cream, cheese cultures, salt, carob bean gum"
-81,milk protein concentrate,7,0.029045643153526972,milk protein concentrate,
-82,cherries,4,0.016597510373443983,cherries,
-83,fruit and vegetable concentrates (color),2,0.008298755186721992,fruit and vegetable concentrates,color
-84,coffee,13,0.05394190871369295,coffee,
-85,rum,4,0.016597510373443983,rum,
-86,chocolate,54,0.22406639004149378,chocolate,
-87,expeller pressed soybean oil,2,0.008298755186721992,expeller pressed soybean oil,
-88,sodium bicarbonate,15,0.06224066390041494,sodium bicarbonate,
-89,"powdered sugar (cane sugar, cornstarch)",1,0.004149377593360996,powdered sugar,"cane sugar, cornstarch"
-90,tapioca syrup,4,0.016597510373443983,tapioca syrup,
-91,partially defatted peanut flour,4,0.016597510373443983,partially defatted peanut flour,
-92,walnuts,2,0.008298755186721992,walnuts,
-93,spice,4,0.016597510373443983,spice,
-94,"vegetable oil (canola, safflower, and/or sunflower oil)",2,0.008298755186721992,vegetable oil,"canola, safflower, and/or sunflower oil"
-95,corn maltodextrin,1,0.004149377593360996,corn maltodextrin,
-96,vanilla beans,11,0.04564315352697095,vanilla beans,
-97,peppermint extract,2,0.008298755186721992,peppermint extract,
-98,butter (cream),1,0.004149377593360996,butter,cream
-99,oats,2,0.008298755186721992,oats,
-100,pistachios,2,0.008298755186721992,pistachios,
-101,pumpkin puree,1,0.004149377593360996,pumpkin puree,
-102,"cream cheese (cultured pasteurized milk and cream, salt, enzymes)",2,0.008298755186721992,cream cheese,"cultured pasteurized milk and cream, salt, enzymes"
-103,nutmeg,3,0.012448132780082987,nutmeg,
-104,ginger,1,0.004149377593360996,ginger,
-105,cloves,1,0.004149377593360996,cloves,
-106,annatto (color),1,0.004149377593360996,annatto,color
-107,blueberry puree concentrate,1,0.004149377593360996,blueberry puree concentrate,
-108,strawberries,8,0.03319502074688797,strawberries,
-109,raspberry puree,8,0.03319502074688797,raspberry puree,
-110,strawberry puree,1,0.004149377593360996,strawberry puree,
-111,peanut butter (peanuts),1,0.004149377593360996,peanut butter,peanuts
-112,rice flour,4,0.016597510373443983,rice flour,
-113,potato flour,1,0.004149377593360996,potato flour,
-114,whey protein concentrate,2,0.008298755186721992,whey protein concentrate,
-115,"chocolate chips (sugar, unsweetened chocolate, cocoa butter, soy lecithin, natural flavor)",1,0.004149377593360996,chocolate chips,"sugar, unsweetened chocolate, cocoa butter, soy lecithin, natural flavor"
-116,almond extract,1,0.004149377593360996,almond extract,
-117,heavy cream,1,0.004149377593360996,heavy cream,
-118,"cream cheese (pasteurized milk and cream, cheese culture, salt, carob bean gum, guar gum)",1,0.004149377593360996,cream cheese,"pasteurized milk and cream, cheese culture, salt, carob bean gum, guar gum"
-119,carob bean gum,46,0.1908713692946058,carob bean gum,
-120,modified food starch (corn),1,0.004149377593360996,modified food starch,corn
-121,xanthan gum,3,0.012448132780082987,xanthan gum,
-122,lactose reduced skim milk,6,0.024896265560165973,lactose reduced skim milk,
-123,"sweetened condensed skim milk (skim milk, sugar)",1,0.004149377593360996,sweetened condensed skim milk,"skim milk, sugar"
-124,maple syrup,1,0.004149377593360996,maple syrup,
-125,natural flavors (contains barley),1,0.004149377593360996,natural flavors,contains barley
-126,caramel flavor,1,0.004149377593360996,caramel flavor,
-127,bourbon,3,0.012448132780082987,bourbon,
-128,ground vanilla beans,2,0.008298755186721992,ground vanilla beans,
-129,butter,29,0.12033195020746888,butter,
-130,caramel ice cream: cream,1,0.004149377593360996,caramel ice cream: cream,
-131,sweetened condensed milk (condensed milk sugar),2,0.008298755186721992,sweetened condensed milk,condensed milk sugar
-132,chocolaty coating: sugar,3,0.012448132780082987,chocolaty coating: sugar,
-133,palm oil,26,0.1078838174273859,palm oil,
-134,salted caramel swirl: corn syrup,1,0.004149377593360996,salted caramel swirl: corn syrup,
-135,contains: milk,6,0.024896265560165973,contains: milk,
-136,egg and soy ingredients,5,0.02074688796680498,egg and soy ingredients,
-137,sweetened condensed milk,10,0.04149377593360996,sweetened condensed milk,
-138,cone pieces,1,0.004149377593360996,cone pieces,
-139,condensed skim milk,2,0.008298755186721992,condensed skim milk,
-140,milk chocolate,15,0.06224066390041494,milk chocolate,
-141,whole milk powder,14,0.058091286307053944,whole milk powder,
-142,condensed milk,8,0.03319502074688797,condensed milk,
-143,black cherries,1,0.004149377593360996,black cherries,
-144,cherry juice concentrate,3,0.012448132780082987,cherry juice concentrate,
-145,apple juice,1,0.004149377593360996,apple juice,
-146,cane sugar,29,0.12033195020746888,cane sugar,
-147,chocolate ice cream: cream,2,0.008298755186721992,chocolate ice cream: cream,
-148,corn oil,1,0.004149377593360996,corn oil,
-149,fructose,19,0.07883817427385892,fructose,
-150,dark chocolate,6,0.024896265560165973,dark chocolate,
-151,powdered sugar,8,0.03319502074688797,powdered sugar,
-152,sunflower lecithin,17,0.07053941908713693,sunflower lecithin,
-153,belgian chocolate,1,0.004149377593360996,belgian chocolate,
-154,vitamin a palmitate,30,0.12448132780082988,vitamin a palmitate,
-155,"coconut cream (coconut extract, water)",2,0.008298755186721992,coconut cream,"coconut extract, water"
-156,caramel swirl: brown sugar,1,0.004149377593360996,caramel swirl: brown sugar,
-157,coconut cream,3,0.012448132780082987,coconut cream,
-158,coconut extract,3,0.012448132780082987,coconut extract,
-159,almonds roasted in vegetable oil,2,0.008298755186721992,almonds roasted in vegetable oil,
-160,safflower oil,5,0.02074688796680498,safflower oil,
-161,toffee,1,0.004149377593360996,toffee,
-162,vanilla ice cream,1,0.004149377593360996,vanilla ice cream,
-163,coffee ice cream,1,0.004149377593360996,coffee ice cream,
-164,"dark chocolate (belgian chocolate, sugar, cocoa butter, soy lecithin, vanilla)",1,0.004149377593360996,dark chocolate,"belgian chocolate, sugar, cocoa butter, soy lecithin, vanilla"
-165,"chocolate chunks with vegetable oil: belgian chocolate (sugar, chocolate, cocoa butter, soy lecithin, natural flavor)",1,0.004149377593360996,chocolate chunks with vegetable oil: belgian chocolate,"sugar, chocolate, cocoa butter, soy lecithin, natural flavor"
-166,cottonseed oil,3,0.012448132780082987,cottonseed oil,
-167,ulce de leche ice cream: cream,1,0.004149377593360996,ulce de leche ice cream: cream,
-168,"sweetened condensed milk (milk,sugar)",1,0.004149377593360996,sweetened condensed milk,"milk,sugar"
-169,"milk chocolate and vegetable oil coating: milk chocolate (sugar, whole milk powder, chocolate, cocoa butter, soy lecithin, vanilla extract)",1,0.004149377593360996,milk chocolate and vegetable oil coating: milk chocolate,"sugar, whole milk powder, chocolate, cocoa butter, soy lecithin, vanilla extract"
-170,chocolate cookie: bleached wheat flour,1,0.004149377593360996,chocolate cookie: bleached wheat flour,
-171,"caramel swirl: sweetened condensed milk (milk, sugar)",1,0.004149377593360996,caramel swirl: sweetened condensed milk,"milk, sugar"
-172,"dark chocolate drizzle with vegetable oil: dark chocolate (sugar, chocolate, soy lecithin, vanilla extract)",1,0.004149377593360996,dark chocolate drizzle with vegetable oil: dark chocolate,"sugar, chocolate, soy lecithin, vanilla extract"
-173,green tea,1,0.004149377593360996,green tea,
-174,bleached wheat flour,3,0.012448132780082987,bleached wheat flour,
-175,nonfat dry milk,6,0.024896265560165973,nonfat dry milk,
-176,mango puree,2,0.008298755186721992,mango puree,
-177,mango,1,0.004149377593360996,mango,
-178,orange juice concentrate,1,0.004149377593360996,orange juice concentrate,
-179,carrot juice concentrate,1,0.004149377593360996,carrot juice concentrate,
-180,pumpkin juice concentrate,1,0.004149377593360996,pumpkin juice concentrate,
-181,peanut butter frozen dessert: water,1,0.004149377593360996,peanut butter frozen dessert: water,
-182,"dark chocolate and vegetable oil coating: dark chocolate (sugar, chocolate, soy lecithin, vanilla extract)",1,0.004149377593360996,dark chocolate and vegetable oil coating: dark chocolate,"sugar, chocolate, soy lecithin, vanilla extract"
-183,"salted fudge swirl: powdered cane sugar (cane sugar, corn starch)",1,0.004149377593360996,salted fudge swirl: powdered cane sugar,"cane sugar, corn starch"
-184,"white chocolate ice cream (cream, skim milk, sugar, corn syrup, egg yolks, natural flavor, cocoa butter)",1,0.004149377593360996,white chocolate ice cream,"cream, skim milk, sugar, corn syrup, egg yolks, natural flavor, cocoa butter"
-185,peppermint bark pieces (sugar,1,0.004149377593360996,peppermint bark pieces,sugar
-186,butterfat,1,0.004149377593360996,butterfat,
-187,"vegetable juice (for color), peppermint oil)",1,0.004149377593360996,vegetable juice,"for color, peppermint oil"
-188,peppermint twists candy (sugar,1,0.004149377593360996,peppermint twists candy,sugar
-189,palm kernel oil,5,0.02074688796680498,palm kernel oil,
-190,"vegetable juice (for color), peppermint oil, soy lecithin)",1,0.004149377593360996,vegetable juice,"for color, peppermint oil, soy lecithin"
-191,white chocolate ice cream: cream,1,0.004149377593360996,white chocolate ice cream: cream,
-192,"dark chocolate and vegetable oil coating with peppermint candy pieces: dark chocolate (sugar, chocolate, soy lecithin, vanilla extract)",1,0.004149377593360996,dark chocolate and vegetable oil coating with peppermint candy pieces: dark chocolate,"sugar, chocolate, soy lecithin, vanilla extract"
-193,"peppermint candy pieces: (sugar, corn syrup, coconut oil, natural flavor, soy lecithin)",1,0.004149377593360996,peppermint candy pieces:,"sugar, corn syrup, coconut oil, natural flavor, soy lecithin"
-194,pineapple,1,0.004149377593360996,pineapple,
-195,weet cream ice cream: cream,1,0.004149377593360996,weet cream ice cream: cream,
-196,roasted pistachios: pistachios,1,0.004149377593360996,roasted pistachios: pistachios,
-197,cream of tartar,1,0.004149377593360996,cream of tartar,
-198,grape juice concentrate,1,0.004149377593360996,grape juice concentrate,
-199,wine,1,0.004149377593360996,wine,
-200,pistachio paste,1,0.004149377593360996,pistachio paste,
-201,vegetable juice concentrate color,1,0.004149377593360996,vegetable juice concentrate color,
-202,egg,4,0.016597510373443983,egg,
-203,pistachios and soy ingredients,1,0.004149377593360996,pistachios and soy ingredients,
-204,raisins,1,0.004149377593360996,raisins,
-205,evaporated milk,1,0.004149377593360996,evaporated milk,
-206,caramelized sugar,2,0.008298755186721992,caramelized sugar,
-207,chocolaty coated cone pieces,1,0.004149377593360996,chocolaty coated cone pieces,
-208,waffle cone pieces,1,0.004149377593360996,waffle cone pieces,
-209,vanilla ice cream: cream,1,0.004149377593360996,vanilla ice cream: cream,
-210,white chocolate ice cream,1,0.004149377593360996,white chocolate ice cream,
-211,milk chocolate and vegetable oil coating,1,0.004149377593360996,milk chocolate and vegetable oil coating,
-212,raspberry swirl,1,0.004149377593360996,raspberry swirl,
-213,mangos,1,0.004149377593360996,mangos,
-214,dextrose,46,0.1908713692946058,dextrose,
-215,lemon juice,5,0.02074688796680498,lemon juice,
-216,bananas,1,0.004149377593360996,bananas,
-217,sugar†,4,0.016597510373443983,sugar†,
-218,corn syrup†,2,0.008298755186721992,corn syrup†,
-219,whole eggs,1,0.004149377593360996,whole eggs,
-220,egg and egg yolk,4,0.016597510373443983,egg and egg yolk,
-221,carob gum,12,0.04979253112033195,carob gum,
-222,black raspberries,1,0.004149377593360996,black raspberries,
-223,chocolate (processed with alkali),8,0.03319502074688797,chocolate,processed with alkali
-224,soy lecithin natural flavor,1,0.004149377593360996,soy lecithin natural flavor,
-225,black raspberry puree,2,0.008298755186721992,black raspberry puree,
-226,rolled oats,3,0.012448132780082987,rolled oats,
-227,blueberries,3,0.012448132780082987,blueberries,
-228,red cabbage juice concentrate (for color),1,0.004149377593360996,red cabbage juice concentrate,for color
-229,dried apples,1,0.004149377593360996,dried apples,
-230,coconut,4,0.016597510373443983,coconut,
-231,palm and soybean oils,1,0.004149377593360996,palm and soybean oils,
-232,"enriched flour (wheat flour, niacin, reduced iron, thiamin mononitrate, riboflavin, folic acid)",1,0.004149377593360996,enriched flour,"wheat flour, niacin, reduced iron, thiamin mononitrate, riboflavin, folic acid"
-233,coconut concentrate,2,0.008298755186721992,coconut concentrate,
-234,"cream cheese (cream, milk, cheese culture, salt, guar gum, carob bean gum, xanthan gum)",1,0.004149377593360996,cream cheese,"cream, milk, cheese culture, salt, guar gum, carob bean gum, xanthan gum"
-235,egg yolks and egg whites,3,0.012448132780082987,egg yolks and egg whites,
-236,cherry puree,2,0.008298755186721992,cherry puree,
-237,wheat bran,3,0.012448132780082987,wheat bran,
-238,chocolate processed with alkali,2,0.008298755186721992,chocolate processed with alkali,
-239,wheat germ,3,0.012448132780082987,wheat germ,
-240,lemon peel,8,0.03319502074688797,lemon peel,
-241,coconut and soybean and sunflower oils,1,0.004149377593360996,coconut and soybean and sunflower oils,
-242,desiccated coconut,1,0.004149377593360996,desiccated coconut,
-243,egg yolk and egg,2,0.008298755186721992,egg yolk and egg,
-244,dextrose†,3,0.012448132780082987,dextrose†,
-245,molasses†,1,0.004149377593360996,molasses†,
-246,coffee extract concentrate,1,0.004149377593360996,coffee extract concentrate,
-247,vermouth,2,0.008298755186721992,vermouth,
-248,whey,62,0.2572614107883817,whey,
-249,hazelnuts,1,0.004149377593360996,hazelnuts,
-250,whole wheat graham flour,2,0.008298755186721992,whole wheat graham flour,
-251,palm and palm kernel oil,3,0.012448132780082987,palm and palm kernel oil,
-252,whole egg,1,0.004149377593360996,whole egg,
-253,red cabbage juice (color),1,0.004149377593360996,red cabbage juice,color
-254,mint leaf extractives,2,0.008298755186721992,mint leaf extractives,
-255,"enriched wheat flour (wheat flour, niacin, reduced iron,thiamin mononitrate, riboflavin, folic acid)",1,0.004149377593360996,enriched wheat flour,"wheat flour, niacin, reduced iron,thiamin mononitrate, riboflavin, folic acid"
-256,palm oil and soybean oil,3,0.012448132780082987,palm oil and soybean oil,
-257,organic skim milk,3,0.012448132780082987,organic skim milk,
-258,organic cane sugar,4,0.016597510373443983,organic cane sugar,
-259,organic cream,4,0.016597510373443983,organic cream,
-260,organic milk,2,0.008298755186721992,organic milk,
-261,"organic butter (cream, salt)",1,0.004149377593360996,organic butter,"cream, salt"
-262,organic glucose syrup,1,0.004149377593360996,organic glucose syrup,
-263,organic egg yolks,1,0.004149377593360996,organic egg yolks,
-264,organic dextrose,4,0.016597510373443983,organic dextrose,
-265,"organic caramelized sugar (organic cane sugar, water)",1,0.004149377593360996,organic caramelized sugar,"organic cane sugar, water"
-266,organic carob bean gum,4,0.016597510373443983,organic carob bean gum,
-267,organic vanilla extract,3,0.012448132780082987,organic vanilla extract,
-268,organic egg whites and egg yolks,1,0.004149377593360996,organic egg whites and egg yolks,
-269,organic chocolate,1,0.004149377593360996,organic chocolate,
-270,organic cocoa processed with alkali,1,0.004149377593360996,organic cocoa processed with alkali,
-271,"organic butter (organic cream, salt)",1,0.004149377593360996,organic butter,"organic cream, salt"
-272,organic black cocoa processed with alkali,1,0.004149377593360996,organic black cocoa processed with alkali,
-273,organic ginger,1,0.004149377593360996,organic ginger,
-274,organic matcha green tea,1,0.004149377593360996,organic matcha green tea,
-275,organic green tea,1,0.004149377593360996,organic green tea,
-276,organic lemon juice concentrate,1,0.004149377593360996,organic lemon juice concentrate,
-277,ingredients: organic skim milk,1,0.004149377593360996,ingredients: organic skim milk,
-278,oakwood extract,1,0.004149377593360996,oakwood extract,
-279,coconut and soybean oil,1,0.004149377593360996,coconut and soybean oil,
-280,pumpkin,1,0.004149377593360996,pumpkin,
-281,brown sugar†,1,0.004149377593360996,brown sugar†,
-282,carrot powder (color),1,0.004149377593360996,carrot powder,color
-283,"cream cheese (milk, cream, cheese culture, salt, carob gum, guar gum, xanthan gum)",1,0.004149377593360996,cream cheese,"milk, cream, cheese culture, salt, carob gum, guar gum, xanthan gum"
-284,"enriched flour (wheat flour, niacin, reduced iron, thaimin mononitrate, riboflavin, folic acid)",1,0.004149377593360996,enriched flour,"wheat flour, niacin, reduced iron, thaimin mononitrate, riboflavin, folic acid"
-285,"balsamic vinegar (red wine vinegar, grape must)",1,0.004149377593360996,balsamic vinegar,"red wine vinegar, grape must"
-286,modified corn starch,1,0.004149377593360996,modified corn starch,
-287,color added,3,0.012448132780082987,color added,
-288,raspberries,1,0.004149377593360996,raspberries,
-289,whole egg and egg yolk,2,0.008298755186721992,whole egg and egg yolk,
-290,"enriched wheat flour (wheat flour, niacin, reduced iron, thiamin mononitrate, riboflavin, folic acid)",2,0.008298755186721992,enriched wheat flour,"wheat flour, niacin, reduced iron, thiamin mononitrate, riboflavin, folic acid"
-291,egg yolk and whole egg,1,0.004149377593360996,egg yolk and whole egg,
-292,hibiscus powder,1,0.004149377593360996,hibiscus powder,
-293,hibiscus flower,1,0.004149377593360996,hibiscus flower,
-294,lime juice concentrate,1,0.004149377593360996,lime juice concentrate,
-295,vegetable juice (for color),1,0.004149377593360996,vegetable juice,for color
-296,vegetable gum (tara),7,0.029045643153526972,vegetable gum,tara
-297,vegetable gums,62,0.2572614107883817,vegetable gums,
-298,carob bean,50,0.2074688796680498,carob bean,
-299,tara,24,0.0995850622406639,tara,
-300,guar,49,0.2033195020746888,guar,
-301,mono and diglycerides,56,0.23236514522821577,mono and diglycerides,
-302,annatto (for color),23,0.0954356846473029,annatto,for color
-303,dutched cocoa (processed with alkali),30,0.12448132780082988,dutched cocoa,processed with alkali
-304,soluble corn fiber,11,0.04564315352697095,soluble corn fiber,
-305,erythritol,4,0.016597510373443983,erythritol,
-306,reb a (stevia leaf extract),4,0.016597510373443983,reb a,stevia leaf extract
-307,chocolatey chips,2,0.008298755186721992,chocolatey chips,
-308,maltitol,2,0.008298755186721992,maltitol,
-309,chocolate liquor (processed with alkali),1,0.004149377593360996,chocolate liquor,processed with alkali
-310,maltitol syrup,11,0.04564315352697095,maltitol syrup,
-311,polydextrose,8,0.03319502074688797,polydextrose,
-312,glycerin,8,0.03319502074688797,glycerin,
-313,acesulfame potassium,12,0.04979253112033195,acesulfame potassium,
-314,sucralose,12,0.04979253112033195,sucralose,
-315,tara gum,5,0.02074688796680498,tara gum,
-316,lactase enzyme,3,0.012448132780082987,lactase enzyme,
-317,maltodextrin (corn),5,0.02074688796680498,maltodextrin,corn
-318,oreo cookie pieces,4,0.016597510373443983,oreo cookie pieces,
-319,unbleached enriched flour,3,0.012448132780082987,unbleached enriched flour,
-320,niacin,8,0.03319502074688797,niacin,
-321,reduced iron,8,0.03319502074688797,reduced iron,
-322,thiamine mononitrate (vitamin b1),4,0.016597510373443983,thiamine mononitrate,vitamin b1
-323,riboflavin (vitamin b2),5,0.02074688796680498,riboflavin,vitamin b2
-324,folic acid,8,0.03319502074688797,folic acid,
-325,palm oil and/or canola oil,2,0.008298755186721992,palm oil and/or canola oil,
-326,leavening,5,0.02074688796680498,leavening,
-327,baking soda and/or calcium phosphate,2,0.008298755186721992,baking soda and/or calcium phosphate,
-328,enriched wheat flour,4,0.016597510373443983,enriched wheat flour,
-329,thiamine mononitrate,2,0.008298755186721992,thiamine mononitrate,
-330,riboflavin,3,0.012448132780082987,riboflavin,
-331,soybean lecithin,4,0.016597510373443983,soybean lecithin,
-332,chocolate chip cookies,1,0.004149377593360996,chocolate chip cookies,
-333,unbleached enriched wheat flour,1,0.004149377593360996,unbleached enriched wheat flour,
-334,semi-sweet chocolate chunks,1,0.004149377593360996,semi-sweet chocolate chunks,
-335,high fructose corn syrup,11,0.04564315352697095,high fructose corn syrup,
-336,artificial flavoring,1,0.004149377593360996,artificial flavoring,
-337,nonfat milk solids,5,0.02074688796680498,nonfat milk solids,
-338,caramel (for color),9,0.03734439834024896,caramel,for color
-339,potassium sorbate (preservative),7,0.029045643153526972,potassium sorbate,preservative
-340,locust bean,1,0.004149377593360996,locust bean,
-341,pgpr,2,0.008298755186721992,pgpr,
-342,peaches,2,0.008298755186721992,peaches,
-343,processed vanilla beans,1,0.004149377593360996,processed vanilla beans,
-344,sorbitol,1,0.004149377593360996,sorbitol,
-345,beet juice (for color),3,0.012448132780082987,beet juice,for color
-346,almond milk,2,0.008298755186721992,almond milk,
-347,liquid sugar,3,0.012448132780082987,liquid sugar,
-348,pea protein,2,0.008298755186721992,pea protein,
-349,natural flavor (coconut),2,0.008298755186721992,natural flavor,coconut
-350,cream cheese,5,0.02074688796680498,cream cheese,
-351,pasteurized milk,4,0.016597510373443983,pasteurized milk,
-352,cheese cultures,4,0.016597510373443983,cheese cultures,
-353,raspberry puree concentrate,1,0.004149377593360996,raspberry puree concentrate,
-354,pasteurized eggs,1,0.004149377593360996,pasteurized eggs,
-355,fudge swirl,2,0.008298755186721992,fudge swirl,
-356,modified food starch (tapioca),2,0.008298755186721992,modified food starch,tapioca
-357,reese's peanut butter cup pieces,2,0.008298755186721992,reese's peanut butter cup pieces,
-358,lactose,11,0.04564315352697095,lactose,
-359,pgpr (emulsifier),3,0.012448132780082987,pgpr,emulsifier
-360,tbhq and citric acid (to maintain freshness),3,0.012448132780082987,tbhq and citric acid,to maintain freshness
-361,tbhq (to maintain freshness),3,0.012448132780082987,tbhq,to maintain freshness
-362,citric acid (to maintain freshness),3,0.012448132780082987,citric acid,to maintain freshness
-363,reese's peanut butter sauce,2,0.008298755186721992,reese's peanut butter sauce,
-364,tbhq (preservative),3,0.012448132780082987,tbhq,preservative
-365,reese's mini pieces,1,0.004149377593360996,reese's mini pieces,
-366,hydrogenated vegetable oil,1,0.004149377593360996,hydrogenated vegetable oil,
-367,palm kernel,1,0.004149377593360996,palm kernel,
-368,soybean,1,0.004149377593360996,soybean,
-369,artificial color,1,0.004149377593360996,artificial color,
-370,yellow 5 lake,2,0.008298755186721992,yellow 5 lake,
-371,yellow 6 lake,2,0.008298755186721992,yellow 6 lake,
-372,red 40 lake,2,0.008298755186721992,red 40 lake,
-373,blue 1 lake,2,0.008298755186721992,blue 1 lake,
-374,cornstarch,6,0.024896265560165973,cornstarch,
-375,confectioner's glaze,1,0.004149377593360996,confectioner's glaze,
-376,lecithin (soy),1,0.004149377593360996,lecithin,soy
-377,modified cornstarch,1,0.004149377593360996,modified cornstarch,
-378,carnauba wax,1,0.004149377593360996,carnauba wax,
-379,vanillin (artificial flavor),1,0.004149377593360996,vanillin,artificial flavor
-380,caramel swirl,5,0.02074688796680498,caramel swirl,
-381,snickers pieces*,2,0.008298755186721992,snickers pieces*,
-382,artificial flavor,5,0.02074688796680498,artificial flavor,
-383,chocolatey coated peanuts,1,0.004149377593360996,chocolatey coated peanuts,
-384,chocolate flavored coating,1,0.004149377593360996,chocolate flavored coating,
-385,vanillin,1,0.004149377593360996,vanillin,
-386,roasted peanuts,1,0.004149377593360996,roasted peanuts,
-387,m&m's minis milk chocolate candies with cocoa butter,1,0.004149377593360996,m&m's minis milk chocolate candies with cocoa butter,
-388,milk chocolate candies,1,0.004149377593360996,milk chocolate candies,
-389,artificial flavors,1,0.004149377593360996,artificial flavors,
-390,blue 2 lake,1,0.004149377593360996,blue 2 lake,
-391,yellow 5,1,0.004149377593360996,yellow 5,
-392,red 40,1,0.004149377593360996,red 40,
-393,blue 1,1,0.004149377593360996,blue 1,
-394,yellow 6,1,0.004149377593360996,yellow 6,
-395,blue 2,1,0.004149377593360996,blue 2,
-396,dextrin,1,0.004149377593360996,dextrin,
-397,sodium citrate,4,0.016597510373443983,sodium citrate,
-398,sodium caseinate,2,0.008298755186721992,sodium caseinate,
-399,calcium carbonate,2,0.008298755186721992,calcium carbonate,
-400,heath toffee bar pieces,2,0.008298755186721992,heath toffee bar pieces,
-401,vegetable oil,4,0.016597510373443983,vegetable oil,
-402,butter (milk),3,0.012448132780082987,butter,milk
-403,fudge covered waffle cone pieces,2,0.008298755186721992,fudge covered waffle cone pieces,
-404,fudge coating,2,0.008298755186721992,fudge coating,
-405,anhydrous milkfat,2,0.008298755186721992,anhydrous milkfat,
-406,vanilla,5,0.02074688796680498,vanilla,
-407,waffle cone,2,0.008298755186721992,waffle cone,
-408,unbleached unenriched wheat flour,4,0.016597510373443983,unbleached unenriched wheat flour,
-409,ground heath toffee pieces,1,0.004149377593360996,ground heath toffee pieces,
-410,and/or palm oil,2,0.008298755186721992,and/or palm oil,
-411,and/or canola oil,2,0.008298755186721992,and/or canola oil,
-412,and/or baking soda,2,0.008298755186721992,and/or baking soda,
-413,and/or calcium phosphate,2,0.008298755186721992,and/or calcium phosphate,
-414,propylene glycol monoesters,1,0.004149377593360996,propylene glycol monoesters,
-415,vegetable gum (guar),2,0.008298755186721992,vegetable gum,guar
-416,cellulose gum,1,0.004149377593360996,cellulose gum,
-417,reese's peanut butter cups,1,0.004149377593360996,reese's peanut butter cups,
-418,reese's peanut butter swirl,1,0.004149377593360996,reese's peanut butter swirl,
-419,orange juice (from concentrate),1,0.004149377593360996,orange juice,from concentrate
-420,strawberry swirl,1,0.004149377593360996,strawberry swirl,
-421,malic acid,1,0.004149377593360996,malic acid,
-422,ascorbic acid,1,0.004149377593360996,ascorbic acid,
-423,cheesecake pieces with graham crust,2,0.008298755186721992,cheesecake pieces with graham crust,
-424,graham crumb,2,0.008298755186721992,graham crumb,
-425,whole wheat/graham flour,2,0.008298755186721992,whole wheat/graham flour,
-426,sweetened lemon zest,2,0.008298755186721992,sweetened lemon zest,
-427,lemon oil,2,0.008298755186721992,lemon oil,
-428,cheesecake base,1,0.004149377593360996,cheesecake base,
-429,pasteurized milk and cream,1,0.004149377593360996,pasteurized milk and cream,
-430,cheese culture,1,0.004149377593360996,cheese culture,
-431,roasted almonds,1,0.004149377593360996,roasted almonds,
-432,plum,1,0.004149377593360996,plum,
-433,cherry and black carrot concentrates (for color),1,0.004149377593360996,cherry and black carrot concentrates,for color
-434,plum concentrate (for color),1,0.004149377593360996,plum concentrate,for color
-435,cherry concentrate (for color),1,0.004149377593360996,cherry concentrate,for color
-436,black carrot concentrate (for color),1,0.004149377593360996,black carrot concentrate,for color
-437,cocoa powder (processed with alkali),1,0.004149377593360996,cocoa powder,processed with alkali
-438,thiamin mononitrate (vitamin b1),1,0.004149377593360996,thiamin mononitrate,vitamin b1
-439,fruit and vegetable juice (for color),1,0.004149377593360996,fruit and vegetable juice,for color
-440,chocolate cookie pieces,1,0.004149377593360996,chocolate cookie pieces,
-441,enriched flour,1,0.004149377593360996,enriched flour,
-442,unsweetened chocolate,1,0.004149377593360996,unsweetened chocolate,
-443,baking powder,1,0.004149377593360996,baking powder,
-444,sodium acid pyrophosphate,1,0.004149377593360996,sodium acid pyrophosphate,
-445,monocalcium phosphate,1,0.004149377593360996,monocalcium phosphate,
-446,cream (milk),1,0.004149377593360996,cream,milk
-447,thiamin mononitrate,1,0.004149377593360996,thiamin mononitrate,
-448,skim milk powder,1,0.004149377593360996,skim milk powder,
-449,soy lecithin (emulsifier),1,0.004149377593360996,soy lecithin,emulsifier
-450,pasteurized whole eggs,1,0.004149377593360996,pasteurized whole eggs,
+,Parent Ingredient,count,percent_containing
+0,lactase,5,0.02074688796680498
+1,baking powder,3,0.012448132780082987
+2,soybean oil,60,0.24896265560165975
+3,pectin,60,0.24896265560165975
+4,milk,120,0.4979253112033195
+5,butter,69,0.2863070539419087
+6,sea salt,18,0.07468879668049792
+7,skim milk,148,0.6141078838174274
+8,salt,158,0.6556016597510373
+9,soy lecithin,142,0.5892116182572614
+10,vanilla extract,119,0.49377593360995853
+11,butteroil,13,0.05394190871369295
+12,water,125,0.5186721991701245
+13,cream,219,0.9087136929460581
+14,sugar,212,0.8796680497925311
+15,egg yolks,124,0.5145228215767634
+16,wheat flour,75,0.3112033195020747
+17,guar gum,84,0.34854771784232363
+18,corn syrup,123,0.5103734439834025
+19,carrageenan,64,0.26556016597510373
+20,liquid sugar,61,0.25311203319502074
+21,brown sugar,30,0.12448132780082988
+22,eggs,28,0.11618257261410789
+23,baking soda,73,0.3029045643153527
+24,tapioca starch,17,0.07053941908713693
+25,invert cane sugar,5,0.02074688796680498
+26,egg whites,19,0.07883817427385892
+27,peanut oil,27,0.11203319502074689
+28,peanuts,27,0.11203319502074689
+29,corn starch,29,0.12033195020746888
+30,barley malt,6,0.024896265560165973
+31,malted barley flour,7,0.029045643153526972
+32,cocoa powder,25,0.1037344398340249
+33,canola oil,30,0.12448132780082988
+34,milk fat,27,0.11203319502074689
+35,wheat and soy,2,0.008298755186721992
+36,coconut oil,139,0.5767634854771784
+37,corn syrup solids,4,0.016597510373443983
+38,enzymes,4,0.016597510373443983
+39,sunflower oil,12,0.04979253112033195
+40,cocoa,81,0.3360995850622407
+41,potato,2,0.008298755186721992
+42,contains milk,2,0.008298755186721992
+43,natural flavor,148,0.6141078838174274
+44,milkfat,15,0.06224066390041494
+45,rice starch,2,0.008298755186721992
+46,yeast extract,2,0.008298755186721992
+47,locust bean gum,2,0.008298755186721992
+48,vanilla bean seeds,2,0.008298755186721992
+49,natural flavors,29,0.12033195020746888
+50,butter oil,10,0.04149377593360996
+51,dried cane syrup,23,0.0954356846473029
+52,citric acid,15,0.06224066390041494
+53,lactic acid,12,0.04979253112033195
+54,graham flour,7,0.029045643153526972
+55,caramelized sugar syrup,5,0.02074688796680498
+56,molasses,36,0.14937759336099585
+57,honey,16,0.06639004149377593
+58,chocolate liquor,19,0.07883817427385892
+59,cocoa butter,55,0.22821576763485477
+60,tapioca flour,2,0.008298755186721992
+61,peanut flour,2,0.008298755186721992
+62,peanut extract,2,0.008298755186721992
+63,roasted almonds,6,0.024896265560165973
+64,blackberry juice concentrate,2,0.008298755186721992
+65,lemon juice concentrate,22,0.0912863070539419
+66,banana puree,4,0.016597510373443983
+67,nonfat milk,9,0.03734439834024896
+68,invert sugar,6,0.024896265560165973
+69,spices,3,0.012448132780082987
+70,cinnamon,6,0.024896265560165973
+71,almonds,15,0.06224066390041494
+72,may contain other tree nuts,2,0.008298755186721992
+73,caramel color,3,0.012448132780082987
+74,whiskey,3,0.012448132780082987
+75,pecans,8,0.03319502074688797
+76,dry malt extract,3,0.012448132780082987
+77,coffee extract,6,0.024896265560165973
+78,cocoa processed with alkali,47,0.1950207468879668
+79,cream cheese,10,0.04149377593360996
+80,milk protein concentrate,8,0.03319502074688797
+81,fruit and vegetable concentrates,3,0.012448132780082987
+82,cherries,5,0.02074688796680498
+83,rum,5,0.02074688796680498
+84,coffee,13,0.05394190871369295
+85,chocolate,50,0.2074688796680498
+86,expeller pressed soybean oil,3,0.012448132780082987
+87,sodium bicarbonate,16,0.06639004149377593
+88,tapioca syrup,5,0.02074688796680498
+89,powdered sugar,10,0.04149377593360996
+90,partially defatted peanut flour,5,0.02074688796680498
+91,walnuts,3,0.012448132780082987
+92,spice,4,0.016597510373443983
+93,vegetable oil,6,0.024896265560165973
+94,corn maltodextrin,2,0.008298755186721992
+95,vanilla beans,12,0.04979253112033195
+96,peppermint extract,3,0.012448132780082987
+97,oats,3,0.012448132780082987
+98,pistachios,4,0.016597510373443983
+99,nutmeg,4,0.016597510373443983
+100,ginger,2,0.008298755186721992
+101,pumpkin puree,2,0.008298755186721992
+102,cloves,2,0.008298755186721992
+103,annatto,24,0.0995850622406639
+104,blueberry puree concentrate,2,0.008298755186721992
+105,strawberries,9,0.03734439834024896
+106,raspberry puree,8,0.03319502074688797
+107,strawberry puree,2,0.008298755186721992
+108,peanut butter,2,0.008298755186721992
+109,potato flour,2,0.008298755186721992
+110,rice flour,5,0.02074688796680498
+111,whey protein concentrate,3,0.012448132780082987
+112,chocolate chips,2,0.008298755186721992
+113,almond extract,2,0.008298755186721992
+114,modified food starch,4,0.016597510373443983
+115,heavy cream,2,0.008298755186721992
+116,xanthan gum,4,0.016597510373443983
+117,carob bean gum,42,0.17427385892116182
+118,lactose reduced skim milk,7,0.029045643153526972
+119,maple syrup,2,0.008298755186721992
+120,sweetened condensed skim milk,2,0.008298755186721992
+121,bourbon,4,0.016597510373443983
+122,caramel flavor,2,0.008298755186721992
+123,ground vanilla beans,3,0.012448132780082987
+124,egg and soy ingredients,6,0.024896265560165973
+125,sweetened condensed milk,12,0.04979253112033195
+126,palm oil,25,0.1037344398340249
+127,cone pieces,2,0.008298755186721992
+128,condensed skim milk,3,0.012448132780082987
+129,condensed milk,8,0.03319502074688797
+130,milk chocolate,16,0.06639004149377593
+131,whole milk powder,15,0.06224066390041494
+132,apple juice,2,0.008298755186721992
+133,black cherries,2,0.008298755186721992
+134,cherry juice concentrate,4,0.016597510373443983
+135,cane sugar,20,0.08298755186721991
+136,corn oil,2,0.008298755186721992
+137,fructose,20,0.08298755186721991
+138,dark chocolate,11,0.04564315352697095
+139,sunflower lecithin,18,0.07468879668049792
+140,belgian chocolate,3,0.012448132780082987
+141,vitamin a palmitate,31,0.12863070539419086
+142,coconut cream,4,0.016597510373443983
+143,coconut extract,3,0.012448132780082987
+144,safflower oil,6,0.024896265560165973
+145,almonds roasted in vegetable oil,3,0.012448132780082987
+146,toffee,2,0.008298755186721992
+147,coffee ice cream,2,0.008298755186721992
+148,vanilla ice cream,2,0.008298755186721992
+149,cottonseed oil,4,0.016597510373443983
+150,bleached wheat flour,5,0.02074688796680498
+151,green tea,2,0.008298755186721992
+152,nonfat dry milk,7,0.029045643153526972
+153,mango puree,3,0.012448132780082987
+154,mango,2,0.008298755186721992
+155,orange juice concentrate,2,0.008298755186721992
+156,carrot juice concentrate,2,0.008298755186721992
+157,pumpkin juice concentrate,2,0.008298755186721992
+158,powdered cane sugar,2,0.008298755186721992
+159,palm kernel oil,6,0.024896265560165973
+160,butterfat,2,0.008298755186721992
+161,peppermint twists candy,2,0.008298755186721992
+162,peppermint bark pieces,2,0.008298755186721992
+163,white chocolate ice cream,3,0.012448132780082987
+164,vegetable juice,3,0.012448132780082987
+165,,2,0.008298755186721992
+166,pineapple,2,0.008298755186721992
+167,cream of tartar,2,0.008298755186721992
+168,grape juice concentrate,2,0.008298755186721992
+169,wine,2,0.008298755186721992
+170,vegetable juice concentrate color,2,0.008298755186721992
+171,pistachios and soy ingredients,2,0.008298755186721992
+172,pistachio paste,2,0.008298755186721992
+173,egg,5,0.02074688796680498
+174,raisins,2,0.008298755186721992
+175,evaporated milk,2,0.008298755186721992
+176,caramelized sugar,3,0.012448132780082987
+177,waffle cone pieces,2,0.008298755186721992
+178,chocolaty coated cone pieces,2,0.008298755186721992
+179,milk chocolate and vegetable oil coating,2,0.008298755186721992
+180,raspberry swirl,2,0.008298755186721992
+181,mangos,2,0.008298755186721992
+182,dextrose,43,0.17842323651452283
+183,lemon juice,6,0.024896265560165973
+184,bananas,2,0.008298755186721992
+185,corn syrup†,3,0.012448132780082987
+186,whole eggs,2,0.008298755186721992
+187,sugar†,5,0.02074688796680498
+188,carob gum,13,0.05394190871369295
+189,egg and egg yolk,5,0.02074688796680498
+190,black raspberries,2,0.008298755186721992
+191,soy lecithin natural flavor,2,0.008298755186721992
+192,black raspberry puree,3,0.012448132780082987
+193,red cabbage juice concentrate,2,0.008298755186721992
+194,rolled oats,4,0.016597510373443983
+195,blueberries,4,0.016597510373443983
+196,dried apples,2,0.008298755186721992
+197,coconut,5,0.02074688796680498
+198,enriched flour,4,0.016597510373443983
+199,palm and soybean oils,2,0.008298755186721992
+200,coconut concentrate,3,0.012448132780082987
+201,chocolate processed with alkali,3,0.012448132780082987
+202,wheat germ,4,0.016597510373443983
+203,egg yolks and egg whites,4,0.016597510373443983
+204,wheat bran,4,0.016597510373443983
+205,cherry puree,3,0.012448132780082987
+206,lemon peel,9,0.03734439834024896
+207,coconut and soybean and sunflower oils,2,0.008298755186721992
+208,desiccated coconut,2,0.008298755186721992
+209,egg yolk and egg,3,0.012448132780082987
+210,molasses†,2,0.008298755186721992
+211,dextrose†,4,0.016597510373443983
+212,coffee extract concentrate,2,0.008298755186721992
+213,whey,63,0.26141078838174275
+214,vermouth,3,0.012448132780082987
+215,hazelnuts,2,0.008298755186721992
+216,whole wheat graham flour,3,0.012448132780082987
+217,palm and palm kernel oil,4,0.016597510373443983
+218,whole egg,2,0.008298755186721992
+219,red cabbage juice,2,0.008298755186721992
+220,mint leaf extractives,3,0.012448132780082987
+221,enriched wheat flour,8,0.03319502074688797
+222,palm oil and soybean oil,4,0.016597510373443983
+223,organic vanilla extract,4,0.016597510373443983
+224,organic skim milk,5,0.02074688796680498
+225,organic egg yolks,2,0.008298755186721992
+226,organic dextrose,5,0.02074688796680498
+227,organic caramelized sugar,2,0.008298755186721992
+228,organic butter,3,0.012448132780082987
+229,organic milk,3,0.012448132780082987
+230,organic carob bean gum,5,0.02074688796680498
+231,organic cream,5,0.02074688796680498
+232,organic glucose syrup,2,0.008298755186721992
+233,organic cane sugar,5,0.02074688796680498
+234,organic black cocoa processed with alkali,2,0.008298755186721992
+235,organic chocolate,2,0.008298755186721992
+236,organic egg whites and egg yolks,2,0.008298755186721992
+237,organic cocoa processed with alkali,2,0.008298755186721992
+238,organic green tea,2,0.008298755186721992
+239,organic lemon juice concentrate,2,0.008298755186721992
+240,organic ginger,2,0.008298755186721992
+241,organic matcha green tea,2,0.008298755186721992
+242,oakwood extract,2,0.008298755186721992
+243,coconut and soybean oil,2,0.008298755186721992
+244,brown sugar†,2,0.008298755186721992
+245,pumpkin,2,0.008298755186721992
+246,carrot powder,2,0.008298755186721992
+247,modified corn starch,2,0.008298755186721992
+248,balsamic vinegar,2,0.008298755186721992
+249,color added,4,0.016597510373443983
+250,raspberries,2,0.008298755186721992
+251,whole egg and egg yolk,3,0.012448132780082987
+252,egg yolk and whole egg,2,0.008298755186721992
+253,hibiscus flower,2,0.008298755186721992
+254,hibiscus powder,2,0.008298755186721992
+255,lime juice concentrate,2,0.008298755186721992
+256,vegetable gum,10,0.04149377593360996
+257,guar,50,0.2074688796680498
+258,vegetable gums,62,0.2572614107883817
+259,mono and diglycerides,57,0.23651452282157676
+260,tara,25,0.1037344398340249
+261,carob bean,51,0.21161825726141079
+262,dutched cocoa,30,0.12448132780082988
+263,reb a,5,0.02074688796680498
+264,soluble corn fiber,12,0.04979253112033195
+265,erythritol,5,0.02074688796680498
+266,maltitol,3,0.012448132780082987
+267,chocolatey chips,3,0.012448132780082987
+268,polydextrose,9,0.03734439834024896
+269,maltitol syrup,12,0.04979253112033195
+270,sucralose,13,0.05394190871369295
+271,acesulfame potassium,13,0.05394190871369295
+272,glycerin,9,0.03734439834024896
+273,tara gum,6,0.024896265560165973
+274,lactase enzyme,4,0.016597510373443983
+275,maltodextrin,6,0.024896265560165973
+276,folic acid,9,0.03734439834024896
+277,leavening,5,0.02074688796680498
+278,thiamine mononitrate,7,0.029045643153526972
+279,baking soda and/or calcium phosphate,3,0.012448132780082987
+280,niacin,9,0.03734439834024896
+281,riboflavin,9,0.03734439834024896
+282,oreo cookie pieces,5,0.02074688796680498
+283,palm oil and/or canola oil,3,0.012448132780082987
+284,unbleached enriched flour,4,0.016597510373443983
+285,reduced iron,9,0.03734439834024896
+286,soybean lecithin,5,0.02074688796680498
+287,caramel,10,0.04149377593360996
+288,unbleached enriched wheat flour,2,0.008298755186721992
+289,semi-sweet chocolate chunks,2,0.008298755186721992
+290,high fructose corn syrup,10,0.04149377593360996
+291,artificial flavoring,2,0.008298755186721992
+292,nonfat milk solids,6,0.024896265560165973
+293,chocolate chip cookies,2,0.008298755186721992
+294,potassium sorbate,8,0.03319502074688797
+295,locust bean,2,0.008298755186721992
+296,pgpr,6,0.024896265560165973
+297,peaches,3,0.012448132780082987
+298,processed vanilla beans,2,0.008298755186721992
+299,sorbitol,2,0.008298755186721992
+300,beet juice,4,0.016597510373443983
+301,pea protein,3,0.012448132780082987
+302,almond milk,3,0.012448132780082987
+303,pasteurized eggs,2,0.008298755186721992
+304,cheese cultures,4,0.016597510373443983
+305,pasteurized milk,4,0.016597510373443983
+306,raspberry puree concentrate,2,0.008298755186721992
+307,tbhq,4,0.016597510373443983
+308,lactose,8,0.03319502074688797
+309,fudge swirl,3,0.012448132780082987
+310,reese's peanut butter cup pieces,3,0.012448132780082987
+311,tbhq and citric acid,4,0.016597510373443983
+312,reese's peanut butter sauce,3,0.012448132780082987
+313,yellow 6 lake,3,0.012448132780082987
+314,lecithin,2,0.008298755186721992
+315,red 40 lake,3,0.012448132780082987
+316,artificial color,2,0.008298755186721992
+317,palm kernel,2,0.008298755186721992
+318,carnauba wax,2,0.008298755186721992
+319,hydrogenated vegetable oil,2,0.008298755186721992
+320,cornstarch,6,0.024896265560165973
+321,modified cornstarch,2,0.008298755186721992
+322,vanillin,3,0.012448132780082987
+323,confectioner's glaze,2,0.008298755186721992
+324,reese's mini pieces,2,0.008298755186721992
+325,soybean,2,0.008298755186721992
+326,yellow 5 lake,3,0.012448132780082987
+327,blue 1 lake,3,0.012448132780082987
+328,chocolate flavored coating,2,0.008298755186721992
+329,artificial flavor,4,0.016597510373443983
+330,roasted peanuts,2,0.008298755186721992
+331,snickers pieces*,3,0.012448132780082987
+332,caramel swirl,6,0.024896265560165973
+333,chocolatey coated peanuts,2,0.008298755186721992
+334,m&m's minis milk chocolate candies with cocoa butter,2,0.008298755186721992
+335,red 40,2,0.008298755186721992
+336,blue 2,2,0.008298755186721992
+337,blue 2 lake,2,0.008298755186721992
+338,yellow 6,2,0.008298755186721992
+339,milk chocolate candies,2,0.008298755186721992
+340,sodium citrate,5,0.02074688796680498
+341,yellow 5,2,0.008298755186721992
+342,artificial flavors,2,0.008298755186721992
+343,dextrin,2,0.008298755186721992
+344,blue 1,2,0.008298755186721992
+345,calcium carbonate,3,0.012448132780082987
+346,sodium caseinate,3,0.012448132780082987
+347,unbleached unenriched wheat flour,5,0.02074688796680498
+348,anhydrous milkfat,3,0.012448132780082987
+349,fudge coating,3,0.012448132780082987
+350,waffle cone,3,0.012448132780082987
+351,heath toffee bar pieces,3,0.012448132780082987
+352,vanilla,4,0.016597510373443983
+353,fudge covered waffle cone pieces,3,0.012448132780082987
+354,ground heath toffee pieces,2,0.008298755186721992
+355,and/or calcium phosphate,3,0.012448132780082987
+356,and/or canola oil,3,0.012448132780082987
+357,cellulose gum,2,0.008298755186721992
+358,and/or baking soda,3,0.012448132780082987
+359,propylene glycol monoesters,2,0.008298755186721992
+360,and/or palm oil,3,0.012448132780082987
+361,reese's peanut butter cups,2,0.008298755186721992
+362,reese's peanut butter swirl,2,0.008298755186721992
+363,orange juice,2,0.008298755186721992
+364,pasteurized milk and cream,2,0.008298755186721992
+365,cheese culture,2,0.008298755186721992
+366,strawberry swirl,2,0.008298755186721992
+367,cheesecake base,2,0.008298755186721992
+368,malic acid,2,0.008298755186721992
+369,lemon oil,3,0.012448132780082987
+370,cheesecake pieces with graham crust,3,0.012448132780082987
+371,sweetened lemon zest,3,0.012448132780082987
+372,whole wheat/graham flour,3,0.012448132780082987
+373,ascorbic acid,2,0.008298755186721992
+374,graham crumb,3,0.012448132780082987
+375,plum concentrate,2,0.008298755186721992
+376,black carrot concentrate,2,0.008298755186721992
+377,plum,2,0.008298755186721992
+378,cherry and black carrot concentrates,2,0.008298755186721992
+379,cherry concentrate,2,0.008298755186721992
+380,thiamin mononitrate,3,0.012448132780082987
+381,fruit and vegetable juice,2,0.008298755186721992
+382,chocolate cookie pieces,2,0.008298755186721992
+383,unsweetened chocolate,2,0.008298755186721992
+384,sodium acid pyrophosphate,2,0.008298755186721992
+385,monocalcium phosphate,2,0.008298755186721992
+386,skim milk powder,2,0.008298755186721992
+387,pasteurized whole eggs,2,0.008298755186721992
