@@ -100,7 +100,8 @@ def dummy_topping(products):
         'marshmallow',
         'cookie dough',
         'toffee',
-        'caramel'
+        'caramel',
+        'vegan'
     ]
 
     for d in dummies_in_description:
@@ -144,4 +145,4 @@ if __name__ == "__main__":
     products = make_dummies(products)
     products.to_csv(wd + "/products_working.csv")
     ingredients_analysis = make_ingredients_df()
-    ingredients_analysis.to_csv(wd + "/ingredients.csv")
+    ingredients_analysis.to_csv(wd + "/data/ingredients.csv")
