@@ -1,0 +1,45 @@
+---
+title: "Ice Cream Rating Analysis"
+author: "Ice Cream Project Team"
+date: "3/2/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Question 9
+```{r include=FALSE}
+ratings <- read.csv('data/reviews_updated_v2.csv')
+```
+We are interested in testing whether the mean rating between ice cream brands is 
+equal. To accomplish this, we will use ANOVA in order to test the following 
+null hypothesis:
+
+H_0: mu_{bj} == mu_{breyers} == mu_{hd} == mu_{talentyi} \
+H_1: mu_{bj} != mu_{breyers} != mu_{hd} != mu_{talentyi}
+
+Average rating and standard deviation for every ice cream brands:
+```{r}
+with(ratings, tapply(ratings$stars, ratings$brand, mean)) # mean
+with(ratings, tapply(ratings$stars, ratings$brand, sd)) # std dev
+```
+
+To proceed with the Analysis of variance technique, the following assumptions 
+about the underlying distribution of ratings must hold:
+
+1) Independence of observations - this has to be true since the samples 
+collected are coming from a vast variety of anonymous users online.
+2) Normality - considering the large sample size of observation, normality can 
+be assumed through the central limit theorem.
+3) Equality of variances - 
+
+```{r}
+summary(aov(ratings$stars ~ ratings$brand, data = ratings))
+```
+
+The F-statistic is highly significant, hence there is significant evidence NOT 
+to reject the null hypothesis that the average rating of ice cream flavor 
+is the same amongst all brands.
+
