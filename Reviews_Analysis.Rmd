@@ -1,0 +1,132 @@
+---
+title: "Ice Cream Analysis"
+author: "Anushna Prakash"
+date: "3/2/2021"
+output: pdf_document
+---
+
+```{r, echo = FALSE}
+library(Hmisc)
+library(dplyr)
+setwd("~/UW MS Data Science/BIOST 557 - Applied Stats & Experimental Design/Ice Cream Project")
+reviews = read.csv("reviews_with_dummies.csv")
+
+```
+
+# Introduction
+## Summary Stats
+Below are the names of the columns in the final processed data set. Most of these are dummy columns developed by the team using Python.
+
+```{r, echo = FALSE}
+names(reviews)
+```
+The stars column contains a rating provided by an online user for a particular ice cream product.
+```{r, echo = FALSE}
+describe(reviews$stars)
+hist(reviews$stars, main = "Histogram of Star Ratings", xlab = "Star Rating")
+```
+# Tests
+
+## T-Tests
+
+``` {r}
+sds = c(sd(reviews$stars),
+        sd(reviews$stars[reviews$contains_dairy == 0]),
+        sd(reviews$stars[reviews$contains_dairy == 1]))
+names(sds) = c("Overall", "Contains Dairy", "Does Not Contain Dairy")
+sds
+```
+
+Because the standard deviations are different from each other, I will use the Welch T-test to determine if average ratings are different for dairy-containing ice creams from dairy-free ice creams.
+
+$H_0: \mu_{dairy} = \mu_{dairy free}$
+$\\H_A: \mu_{dairy} \neq \mu_{dairy free}$
+
+```{r}
+dairy_free = reviews$stars[reviews$contains_dairy == 0]
+dairy = reviews$stars[reviews$contains_dairy == 1]
+t.test(x = dairy, 
+       y = dairy_free, 
+       alternative = "two.sided", 
+       mu = 0, 
+       var.equal = FALSE,
+       conf.level = 0.95)
+
+```
+What about organic vs. non-organic?
+
+$H_0: \mu_{organic} = \mu_{conventional}$
+$\\H_A: \mu_{organic} \neq \mu_{conventional}$
+
+
+```{r}
+non_organic = reviews$stars[reviews$contains_organic == 0]
+organic = reviews$stars[reviews$contains_organic == 1]
+t.test(x = organic, 
+       y = non_organic, 
+       alternative = "two.sided",
+       mu = 0,
+       var.equal = FALSE,
+       conf.level = 0.95)
+```
+
+What about nuts vs. no-nuts?
+
+$H_0: \mu_{nuts} = \mu_{nonuts}$
+$\\H_A: \mu_{nuts} \neq \mu_{nonuts}$
+
+
+```{r}
+nuts = c('almonds', 'peanuts', 'walnuts', 'pecans')
+has_nuts = reviews$stars[(reviews$contains_almonds == 1)
+                         | (reviews$contains_walnuts == 1)
+                         | (reviews$contains_peanuts == 1)
+                         | (reviews$contains_pecans == 1)]
+no_nuts = reviews$stars[(reviews$contains_almonds == 0)
+                         & (reviews$contains_walnuts == 0)
+                         & (reviews$contains_peanuts == 0)
+                         & (reviews$contains_pecans == 0)]
+
+t.test(x = has_nuts, 
+       y = no_nuts,
+       alternative = "two.sided",
+       mu = 0,
+       var.equal = FALSE,
+       conf.level = 0.95)
+```
+
+## Question 9 & 10: ANOVA
+We are interested in testing whether the mean rating between ice cream brands is equal. To accomplish this, we will use ANOVA in order to test the following null hypothesis:
+
+$H_0: \mu_{bj} = \mu_{breyers} = \mu_{hd} = \mu_{talenti}$
+$\\H_A: \mu_{bj} \neq \mu_{breyers} \neq \mu_{hd} \neq \mu_{talenti}$
+
+Average rating and standard deviation for every ice cream brands:
+```{r}
+with(reviews, tapply(reviews$stars, reviews$brand, mean)) # mean
+with(reviews, tapply(reviews$stars, reviews$brand, sd)) # std dev
+```
+
+To proceed with the Analysis of variance technique, the following assumptions about the underlying distribution of ratings must hold:
+
+1) Independence of observations - this has to be true since the samples collected are coming from a vast variety of anonymous users online.
+2) Normality - considering the large sample size of observation, normality can be assumed through the central limit theorem.
+3) Equality of variances - 
+
+```{r}
+summary(aov(stars ~ brand, data = reviews))
+```
+
+The F-statistic is highly significant, hence there is significant evidence to reject the null hypothesis that the average rating of ice cream flavor is the same between all brands.
+
+
+$H_0: \mu_{vanilla} = \mu_{chocolate} = \mu_{strawberry}$
+$\\H_A: \mu_{vanilla} \neq \mu_{chocolate} \neq \mu_{strawberry}$
+
+```{r}
+flavors = c('vanilla', 'chocolate', 'strawberry')
+reviews_filtered = reviews %>% filter(Flavor %in% flavors)
+with(reviews_filtered, tapply(reviews_filtered$stars, reviews_filtered$Flavor, mean)) # mean
+summary(aov(formula = stars ~ Flavor, data = reviews_filtered))
+
+```
