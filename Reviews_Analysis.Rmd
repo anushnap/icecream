@@ -10,6 +10,7 @@ library(Hmisc)
 library(dplyr)
 setwd("~/UW MS Data Science/BIOST 557 - Applied Stats & Experimental Design/Ice Cream Project")
 reviews = read.csv("reviews_with_dummies.csv")
+reviews$is_5 = ifelse(reviews$stars == 5, 1, 0)
 
 ```
 
@@ -24,6 +25,7 @@ The stars column contains a rating provided by an online user for a particular i
 ```{r, echo = FALSE}
 describe(reviews$stars)
 hist(reviews$stars, main = "Histogram of Star Ratings", xlab = "Star Rating")
+hist(reviews$is_5, main = "Histogram of 5-Star Reviews", xlab = "5 Star Rating")
 ```
 # Tests
 
