@@ -1,0 +1,134 @@
+---
+title: "Ice Cream Analysis"
+author: "Anushna Prakash"
+date: "3/2/2021"
+output: pdf_document
+---
+
+```{r, echo = FALSE}
+library(Hmisc)
+library(dplyr)
+setwd("~/UW MS Data Science/BIOST 557 - Applied Stats & Experimental Design/Ice Cream Project")
+reviews = read.csv("reviews_with_dummies.csv")
+reviews$is_5 = ifelse(reviews$stars == 5, 1, 0)
+reviews = write.csv(reviews, "reviews_with_dummies_dichotomous.csv")
+```
+
+# Introduction
+## Summary Stats
+Below are the names of the columns in the final processed data set. Most of these are dummy columns developed by the team using Python.
+
+```{r, echo = FALSE}
+names(reviews)
+```
+The stars column contains a rating provided by an online user for a particular ice cream product.
+```{r, echo = FALSE}
+describe(reviews$stars)
+hist(reviews$stars, main = "Histogram of Star Ratings", xlab = "Star Rating")
+hist(reviews$is_5, main = "Histogram of 5-Star Reviews", xlab = "5 Star Rating")
+```
+# Tests
+
+## T-Tests
+
+``` {r}
+sds = c(sd(reviews$is_5),
+        sd(reviews$is_5[reviews$contains_dairy == 0]),
+        sd(reviews$is_5[reviews$contains_dairy == 1]))
+names(sds) = c("Overall", "Contains Dairy", "Does Not Contain Dairy")
+sds
+```
+
+Because the standard deviations are different from each other, I will use the Welch T-test to determine if average ratings are different for dairy-containing ice creams from dairy-free ice creams.
+
+$H_0: p_{dairy} = p_{dairy free}$
+$\\H_A: p_{dairy} \neq p_{dairy free}$
+
+```{r}
+dairy_free = reviews$is_5[reviews$contains_dairy == 0]
+dairy = reviews$is_5[reviews$contains_dairy == 1]
+prop.test(x = c(sum(dairy_free), sum(dairy)),
+          n = c(length(dairy_free), length(dairy)),
+          alternative = "two.sided")
+```
+What about organic vs. non-organic?
+```{r}
+means = c(mean(reviews$is_5),
+        mean(reviews$is_5[reviews$contains_organic == 0]),
+        mean(reviews$is_5[reviews$contains_organic == 1]))
+names(means) = c("Overall", "Conventional", "Organic")
+means
+
+```
+$H_0: p_{organic} = p_{conventional}$
+$\\H_A: p_{organic} \neq p_{conventional}$
+
+
+```{r}
+non_organic = reviews$is_5[reviews$contains_organic == 0]
+organic = reviews$is_5[reviews$contains_organic == 1]
+prop.test(x = c(sum(non_organic), sum(organic)),
+          n = c(length(non_organic), length(organic)),
+          alternative = "two.sided")
+```
+
+What about nuts vs. no-nuts?
+
+$H_0: p_{nuts} = p_{nonuts}$
+$\\H_A: p_{nuts} \neq p_{nonuts}$
+
+
+```{r}
+nuts = c('almonds', 'peanuts', 'walnuts', 'pecans')
+has_nuts = reviews$is_5[(reviews$contains_almonds == 1)
+                        | (reviews$contains_walnuts == 1)
+                        | (reviews$contains_peanuts == 1)
+                        | (reviews$contains_pecans == 1)]
+no_nuts = reviews$is_5[(reviews$contains_almonds == 0)
+                       & (reviews$contains_walnuts == 0)
+                       & (reviews$contains_peanuts == 0)
+                       & (reviews$contains_pecans == 0)]
+
+prop.test(x = c(sum(has_nuts), sum(no_nuts)),
+          n = c(length(has_nuts), length(no_nuts)),
+          alternative = "two.sided")
+```
+
+## Question 9 & 10: ANOVA
+We are interested in testing whether the mean rating between ice cream brands is equal. To accomplish this, we will use ANOVA in order to test the following null hypothesis:
+
+$H_0: p_{bj} = p_{breyers} = p_{hd} = p_{talenti}$
+$\\H_A: p_{bj} \neq p_{breyers} \neq p_{hd} \neq p_{talenti}$
+
+Average rating and standard deviation for every ice cream brands:
+```{r}
+brand_vector = tapply(reviews$is_5, reviews$brand, sum) # sum of successes
+total_vector = tapply(reviews$is_5, reviews$brand, length) # sum of trials
+brand_vector
+total_vector
+```
+
+To proceed with the Analysis of variance technique, the following assumptions about the underlying distribution of ratings must hold:
+
+1) Independence of observations - this has to be true since the samples collected are coming from a vast variety of anonymous users online.
+2) Normality - considering the large sample size of observation, normality can be assumed through the central limit theorem.
+
+```{r}
+prop.test(x = brand_vector,
+          n = total_vector,
+          alternative = "two.sided")
+```
+
+$H_0: p_{vanilla} = p_{chocolate} = p_{strawberry}$
+$\\H_A: p_{vanilla} \neq p_{chocolate} \neq p_{strawberry}$
+
+```{r}
+flavors = c('vanilla', 'chocolate', 'strawberry')
+reviews_filtered = reviews %>% filter(Flavor %in% flavors)
+flavor_vector = tapply(reviews_filtered$is_5, reviews_filtered$Flavor, sum)
+total_vector = tapply(reviews_filtered$is_5, reviews_filtered$Flavor, length)
+prop.test(x = flavor_vector,
+          n = total_vector,
+          alternative = "two.sided")
+
+```
