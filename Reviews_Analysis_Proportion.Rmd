@@ -11,7 +11,6 @@ library(dplyr)
 setwd("~/UW MS Data Science/BIOST 557 - Applied Stats & Experimental Design/Ice Cream Project")
 reviews = read.csv("reviews_with_dummies.csv")
 reviews$is_5 = ifelse(reviews$stars == 5, 1, 0)
-reviews = write.csv(reviews, "reviews_with_dummies_dichotomous.csv")
 ```
 
 # Introduction
@@ -22,11 +21,7 @@ Below are the names of the columns in the final processed data set. Most of thes
 names(reviews)
 ```
 The stars column contains a rating provided by an online user for a particular ice cream product.
-```{r, echo = FALSE}
-describe(reviews$stars)
-hist(reviews$stars, main = "Histogram of Star Ratings", xlab = "Star Rating")
-hist(reviews$is_5, main = "Histogram of 5-Star Reviews", xlab = "5 Star Rating")
-```
+
 # Tests
 
 ## T-Tests
@@ -93,6 +88,52 @@ prop.test(x = c(sum(has_nuts), sum(no_nuts)),
           n = c(length(has_nuts), length(no_nuts)),
           alternative = "two.sided")
 ```
+What about chocolate vs. no-chocolate?
+
+$H_0: p_{chocolate} = p_{chocolate}$
+$\\H_A: p_{chocolate} \neq p_{chocolate}$
+
+```{r}
+chocolate_vector = reviews$is_5[reviews$contains_chocolate == 1]
+non_choc_vector = reviews$is_5[reviews$contains_chocolate == 0]
+prop.test(x = c(sum(chocolate_vector), sum(non_choc_vector)),
+          n = c(length(chocolate_vector), length(non_choc_vector)),
+          alternative = "two.sided")
+```
+What about marshmallow vs. no marshmallow?
+
+$H_0: p_{marshmallow} = p_{no \ marshmallow}$
+$\\H_A: p_{marshmallow} \neq p_{np \ marshmallow}$
+
+```{r}
+marsh_vector = reviews$is_5[reviews$contains_marshmallow == 1]
+non_marsh_vector = reviews$is_5[reviews$contains_marshmallow == 0]
+prop.test(x = c(sum(marsh_vector), sum(non_marsh_vector)),
+          n = c(length(marsh_vector), length(non_marsh_vector)),
+          alternative = "two.sided")
+```
+What about fruits vs. no fruits?
+
+$H_0: p_{fruits} = p_{no \ fruits}$
+$\\H_A: p_{fruits} \neq p_{no \ fruits}$
+
+```{r}
+contains_fruits = reviews$is_5[(reviews$contains_banana == 1)
+                               | (reviews$contains_mangos == 1)
+                               # | (reviews$contains_lemon.juice.concentrate == 1)
+                               | (reviews$contains_pineapple == 1)
+                               | (reviews$contains_raspberries == 1)
+                               | (reviews$contains_strawberries == 1)]
+no_fruits = reviews$is_5[(reviews$contains_banana == 0)
+                               & (reviews$contains_mangos == 0)
+                               # & (reviews$contains_lemon.juice.concentrate == 0)
+                               & (reviews$contains_pineapple == 0)
+                               & (reviews$contains_raspberries == 0)
+                               & (reviews$contains_strawberries == 0)]
+prop.test(x = c(sum(contains_fruits), sum(no_fruits)),
+          n = c(length(contains_fruits), length(no_fruits)),
+          alternative = "two.sided")
+```
 
 ## Question 9 & 10: ANOVA
 We are interested in testing whether the mean rating between ice cream brands is equal. To accomplish this, we will use ANOVA in order to test the following null hypothesis:
@@ -132,3 +173,23 @@ prop.test(x = flavor_vector,
           alternative = "two.sided")
 
 ```
+
+
+## Linear Regression and Logistic Regression
+
+Linear Regression Assumptions:
+1. Indepdence
+2. Model is linear
+3. Homoskedastic errors
+4. No multicollinearity
+
+$$ {star \ rating} = \beta_0 + ...$$
+
+Logistic Regression Assumptions:
+1. Independence
+2. Response is binary
+3. No multicollinearity
+4. Linear relationship of betas to log-odds
+5. Large sample size
+
+$$ log(\frac{p_{5 \ star}}{1 - p_{5 \ star}}) = \beta_0+\beta_1{bj}+\beta_2{dreyers}+\beta_3{talenti}+\beta_4{vanilla}+\beta_5{chocolate}+...\\ +\beta_{n-}{contains \ chocolate}+...+\beta_{n-1}{contains \ dairy}+\beta_n{organic}$$
