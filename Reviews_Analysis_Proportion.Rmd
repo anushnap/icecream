@@ -19,6 +19,17 @@ Below are the names of the columns in the final processed data set. Most of thes
 
 ```{r, echo = FALSE}
 names(reviews)
+
+# This reduced version uses the binary is_5 for response variable
+reviews.reduced = select(reviews, -c(X, ingredients.1, key,
+                                     author, date, title,
+                                     helpful_yes, helpful_no, text,
+                                     taste, ingredients, texture,
+                                     likes, name, stars))
+
+# This version uses binary is_5 for response, and removes dummified flavor and brand columns
+reviews.binary = select(reviews.reduced, c(1, 2, 70:90, 97))
+names(reviews.binary)
 ```
 The stars column contains a rating provided by an online user for a particular ice cream product.
 
