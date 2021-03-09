@@ -30,6 +30,8 @@ reviews.reduced = select(reviews, -c(X, ingredients.1, key,
 # This version uses binary is_5 for response, and removes dummified flavor and brand columns
 reviews.binary = select(reviews.reduced, c(1, 2, 70:90, 97))
 names(reviews.binary)
+reviews.binary$Flavor = as.factor(reviews.binary$Flavor)
+reviews.binary$brand = as.factor(reviews.binary$brand)
 ```
 The stars column contains a rating provided by an online user for a particular ice cream product.
 
@@ -204,3 +206,10 @@ Logistic Regression Assumptions:
 5. Large sample size
 
 $$ log(\frac{p_{5 \ star}}{1 - p_{5 \ star}}) = \beta_0+\beta_1{bj}+\beta_2{dreyers}+\beta_3{talenti}+\beta_4{vanilla}+\beta_5{chocolate}+...\\ +\beta_{n-}{contains \ chocolate}+...+\beta_{n-1}{contains \ dairy}+\beta_n{organic}$$
+
+# Checking for multicollinearity
+```{r}
+# cor(reviews.binary, method = "pearson")
+model_full = glm(formula = is_5 ~ ., family = "binomial", data = reviews.binary)
+summary(model_full)
+```
