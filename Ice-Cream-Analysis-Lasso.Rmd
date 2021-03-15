@@ -1,0 +1,114 @@
+---
+title: "Ice-Cream-Analysis"
+author: "Emily Yamauchi"
+date: "3/10/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(glmnet)
+library(dplyr)
+```
+
+```{r setUp}
+
+url <-  'https://raw.githubusercontent.com/emi90/icecream/main/reviews_with_dummies.csv'
+df <- read.csv(url)
+```
+
+```{r loadData}
+
+exclude_col = c("X", "ingredients.1", "Flavor", "brand", "key", "author", 
+                "date", "stars", "title", "helpful_yes", "helpful_no", "text",
+                "taste", "ingredients", "texture", "likes", "is_5")
+
+x = select(df, -all_of(exclude_col))
+y = df$is_5
+
+```
+
+
+```{r fit}
+
+fit = glmnet(x, y, family = "binomial")
+
+
+```
+
+
+```{r plot}
+
+plot(fit, xvar = "dev", label = TRUE)
+
+
+```
+```{r summary}
+
+#print(fit)
+coef(fit, s = 0.1)
+
+
+```
+
+```{r cross_validation}
+
+cvfit = cv.glmnet(data.matrix(x), y)
+
+
+```
+
+```{r cv_plot}
+
+plot(cvfit)
+
+```
+```{r cvcont}
+
+coef(cvfit, s = "lambda.min")
+
+```
+
+
+
+
+
+```{r dairyFree}
+
+n_dairy = sum(df$contains_dairy == 1)
+n_nondairy = sum(df$contains_dairy == 0)
+
+y_dairy = sum((df$contains_dairy == 1) * (df$is_5 == 1))
+y_nondairy =  sum((df$contains_dairy == 0) * (df$is_5 == 1))
+
+n = c(n_dairy, n_nondairy)
+y = c(y_dairy, y_nondairy)
+
+phat = y/n
+diff = diff(phat)
+
+pooled.p = sum(n*phat)/sum(n)
+se = sqrt(pooled.p * (1 - pooled.p) * sum(1/n))
+z = diff/se
+
+data.frame(y, n, phat, row.names = c("dairy", "nondairy"))
+data.frame(phat[1], phat[2], diff, se, z, p = 2*(1-pnorm(abs(z))))
+
+```
+
+```{r dairyFree2}
+
+dairy_free = data.frame(rbind(y, n-y))
+names(dairy_free) = c("contains_dairy", "dairy_free")
+row.names(dairy_free) = c("is_5", "not_5")
+prop.test(cbind(y, n-y), correct =F)
+
+
+```
+
+```{r plotDairy}
+
+summary(glm(is_5 ~ contains_chocolate, data = df, family = binomial))
+
+```
+
