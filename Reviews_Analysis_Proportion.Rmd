@@ -57,7 +57,10 @@ dairy_free = reviews$is_5[reviews$contains_dairy == 0]
 dairy = reviews$is_5[reviews$contains_dairy == 1]
 prop.test(x = c(sum(dairy_free), sum(dairy)),
           n = c(length(dairy_free), length(dairy)),
-          alternative = "two.sided")
+          alternative = "two.sided",
+          correct = FALSE)
+table(reviews$contains_dairy, reviews$is_5, dnn = c('Contains Dairy', 'Is 5-star'))
+
 ```
 What about organic vs. non-organic?
 ```{r}
@@ -77,7 +80,10 @@ non_organic = reviews$is_5[reviews$contains_organic == 0]
 organic = reviews$is_5[reviews$contains_organic == 1]
 prop.test(x = c(sum(non_organic), sum(organic)),
           n = c(length(non_organic), length(organic)),
-          alternative = "two.sided")
+          alternative = "two.sided",
+          correct = FALSE)
+
+table(reviews$contains_organic, reviews$is_5, dnn = c('Is Organic', 'Is 5-star'))
 ```
 
 What about nuts vs. no-nuts?
@@ -99,7 +105,8 @@ no_nuts = reviews$is_5[(reviews$contains_almonds == 0)
 
 prop.test(x = c(sum(has_nuts), sum(no_nuts)),
           n = c(length(has_nuts), length(no_nuts)),
-          alternative = "two.sided")
+          alternative = "two.sided",
+          correct = FALSE)
 ```
 What about chocolate vs. no-chocolate?
 
@@ -111,7 +118,8 @@ chocolate_vector = reviews$is_5[reviews$contains_chocolate == 1]
 non_choc_vector = reviews$is_5[reviews$contains_chocolate == 0]
 prop.test(x = c(sum(chocolate_vector), sum(non_choc_vector)),
           n = c(length(chocolate_vector), length(non_choc_vector)),
-          alternative = "two.sided")
+          alternative = "two.sided",
+          correct = FALSE)
 ```
 What about marshmallow vs. no marshmallow?
 
@@ -123,7 +131,8 @@ marsh_vector = reviews$is_5[reviews$contains_marshmallow == 1]
 non_marsh_vector = reviews$is_5[reviews$contains_marshmallow == 0]
 prop.test(x = c(sum(marsh_vector), sum(non_marsh_vector)),
           n = c(length(marsh_vector), length(non_marsh_vector)),
-          alternative = "two.sided")
+          alternative = "two.sided",
+          correct = FALSE)
 ```
 What about fruits vs. no fruits?
 
@@ -145,7 +154,8 @@ no_fruits = reviews$is_5[(reviews$contains_banana == 0)
                                & (reviews$contains_strawberries == 0)]
 prop.test(x = c(sum(contains_fruits), sum(no_fruits)),
           n = c(length(contains_fruits), length(no_fruits)),
-          alternative = "two.sided")
+          alternative = "two.sided",
+          correct = FALSE)
 ```
 
 ## Question 9 & 10: ANOVA
@@ -170,7 +180,9 @@ To proceed with the Analysis of variance technique, the following assumptions ab
 ```{r}
 prop.test(x = brand_vector,
           n = total_vector,
-          alternative = "two.sided")
+          alternative = "two.sided",
+          correct = FALSE)
+table(reviews$brand, reviews$is_5, dnn = c('Brand', 'Is 5-star'))
 ```
 
 $H_0: p_{vanilla} = p_{chocolate} = p_{strawberry}$
@@ -183,20 +195,14 @@ flavor_vector = tapply(reviews_filtered$is_5, reviews_filtered$Flavor, sum)
 total_vector = tapply(reviews_filtered$is_5, reviews_filtered$Flavor, length)
 prop.test(x = flavor_vector,
           n = total_vector,
-          alternative = "two.sided")
+          alternative = "two.sided",
+          correct = FALSE)
+table(reviews_filtered$Flavor, reviews_filtered$is_5, dnn = c('Flavor', 'Is 5-star'))
 
 ```
 
 
 ## Linear Regression and Logistic Regression
-
-Linear Regression Assumptions:
-1. Indepdence
-2. Model is linear
-3. Homoskedastic errors
-4. No multicollinearity
-
-$$ {star \ rating} = \beta_0 + ...$$
 
 Logistic Regression Assumptions:
 1. Independence
@@ -205,11 +211,26 @@ Logistic Regression Assumptions:
 4. Linear relationship of betas to log-odds
 5. Large sample size
 
-$$ log(\frac{p_{5 \ star}}{1 - p_{5 \ star}}) = \beta_0+\beta_1{bj}+\beta_2{dreyers}+\beta_3{talenti}+\beta_4{vanilla}+\beta_5{chocolate}+...\\ +\beta_{n-}{contains \ chocolate}+...+\beta_{n-1}{contains \ dairy}+\beta_n{organic}$$
+$$ 
+\log(\frac{p_{5 \ star}}{1 - p_{5 \ star}}) =  
+\beta_0 + \beta_1{hd} + \beta_2{breyers} + \beta_3{talenti} +  
+\\ \beta_4{vanilla} + \beta_5{chocolate} + \beta_6{strawberry}...  
+\\ + \beta_{n-t}{contains \ chocolate} + \beta_{n-t+1}{contains \ peanuts}...  
+\\ + \beta_{n-1}{contains \ dairy} + \beta_n{organic}
+$$
 
 # Checking for multicollinearity
 ```{r}
-# cor(reviews.binary, method = "pearson")
-model_full = glm(formula = is_5 ~ ., family = "binomial", data = reviews.binary)
-summary(model_full)
+reviews.binary.dummies = fastDummies::dummy_cols(reviews.binary)
+reviews.binary.dummies = subset(reviews.binary.dummies, select = -c(Flavor, 
+                                                                    brand, 
+                                                                    contains_banana,
+                                                                    contains_pineapple,
+                                                                    contains_mangos))
+cor_matrix = cor(reviews.binary.dummies, method = "pearson")
+which(abs(cor_matrix) > 0.8, arr.ind = TRUE)
+```
+```{r, echo = FALSE}
+lm_full = glm(formula = is_5 ~ ., data = reviews.binary, family = "binomial")
+summary(lm_full)
 ```
